@@ -1,0 +1,103 @@
+#{extends 'main.html' /}
+#{set title:'Station' /}
+
+#{menu id:"dashboard"/}
+
+<div class="content box">
+
+    <div class="columns">
+
+        <div class="column is-one-fifth">
+
+            <div class="card" >
+                <div class="card-content">
+
+                    <div class="content has-text-centered">
+                        <h2>${station.name}</h2>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="column is-one-fifth">
+
+            <div class="card">
+                <div class="card-content">
+
+                    <div class="content has-text-centered">
+                        <h2>Weather</h2>
+                        ${station.recentCodeConverted()}
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="column is-one-fifth">
+
+            <div class="card">
+                <div class="card-content">
+
+                    <div class="content has-text-centered">
+                        <h2>Temp</h2>
+                        ${station.recentTemperatureC()} C <br>
+                        ${station.recentTemperatureF()} F
+                        <br>
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="column is-one-fifth">
+
+            <div class="card">
+                <div class="card-content">
+
+                    <div class="content has-text-centered">
+                        <h2>Wind</h2>
+                        ${station.recentWindSpeedBeaufort()} bft
+                        (${station.recentWindSpeedBeaufortLabel()}) <br>
+                        ${station.recentWindDirection()} <br>
+                        Feels like ${station.recentWindFeelsLike()}
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="column is-one-fifth">
+
+            <div class="card">
+                <div class="card-content">
+
+                    <div class="content has-text-centered">
+                        <h2>Pressure</h2>
+                        ${station.recentPressure()} hpa
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    #{listreadings station:station/}
+    #{addreading station:station/}
+</div>

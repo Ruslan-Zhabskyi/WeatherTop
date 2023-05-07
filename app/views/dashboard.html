@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+
+#{menu id:"dashboard"/}
+
+#{list items:stations, as:'station'}
+
+<div class="content box">
+    <h1 class="title">
+        ${station.name}
+    </h1>
+    <p>
+        <a href="/stations/${station.id}" class="icon has-text-primary">
+            <i class="fas fa-folder"></i>
+        </a>
+    </p>
+</div>
+
+#{/list}
+
+<div class="content box">
+    #{addstation /}
+</div>

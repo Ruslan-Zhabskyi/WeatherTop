@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8b7c012d-60ef-4dbc-b666-92d60588a2e8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../00.Lab-09a Playlist-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../00.Lab-09a Playlist-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01.Exercise Solutions.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../01.Exercise Solutions.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NODfNoZx8ki2idaukuFCUCPZS3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\hdip\HDip Comp Sci Coursewebs\web-development-1-2023\topic-08-introducing-mvc\unit-0\book-c-playlist-1\archives\playlist\app\views\tags" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b7c012d-60ef-4dbc-b666-92d60588a2e8" name="Default Changelist" comment="" />
+      <created>1679526338347</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679526338347</updated>
+      <workItem from="1679526340990" duration="1607000" />
+      <workItem from="1679528138566" duration="3497000" />
+      <workItem from="1680029735939" duration="1977000" />
+      <workItem from="1681154974354" duration="7949000" />
+      <workItem from="1681249227658" duration="2592000" />
+      <workItem from="1681311086989" duration="18204000" />
+      <workItem from="1682286477337" duration="6000" />
+      <workItem from="1682287488677" duration="751000" />
+      <workItem from="1682891339394" duration="2367000" />
+      <workItem from="1683058932923" duration="5255000" />
+      <workItem from="1683066491745" duration="131000" />
+      <workItem from="1683230175996" duration="21000" />
+      <workItem from="1683230706745" duration="7000" />
+      <workItem from="1683233694244" duration="2881000" />
+      <workItem from="1683367991094" duration="359000" />
+      <workItem from="1683460210279" duration="98000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
