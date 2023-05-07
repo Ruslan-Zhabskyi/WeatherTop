@@ -1,7 +1,12 @@
 #{extends 'main.html' /}
 #{set title:'Welcome' /}
 
+#{if session.get("logged_in_Memberid") != null }
+#{menu id:"start"/}
+#{/if}
+#{else}
 #{welcomemenu id:"start"/}
+#{/else}
 
 <div class="content box has-text-centered">
     <p class="title">
