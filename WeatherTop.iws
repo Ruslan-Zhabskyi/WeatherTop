@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b7c012d-60ef-4dbc-b666-92d60588a2e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/WeatherTop.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTop.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherTop.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTop.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,7 +89,7 @@
       <workItem from="1683230706745" duration="7000" />
       <workItem from="1683233694244" duration="2881000" />
       <workItem from="1683367991094" duration="359000" />
-      <workItem from="1683460210279" duration="440000" />
+      <workItem from="1683460210279" duration="753000" />
     </task>
     <servers />
   </component>
