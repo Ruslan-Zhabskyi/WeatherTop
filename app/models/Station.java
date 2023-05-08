@@ -22,7 +22,6 @@ public class Station extends Model {
     this.name = name;
     this.lat = lat;
     this.lng = lng;
-
   }
 
   public String getName(){
