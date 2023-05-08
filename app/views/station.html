@@ -32,10 +32,9 @@
                 <div class="card-content">
 
                     <div class="content has-text-centered">
-                        <h2>Weather</h2>
-                        ${station.recentCodeConverted()}
-                       <!-- learned what is syntax for the bellow from chatGPT-->
-                        <i class="fas fa-${station.recentCodeConverted() === 'Rain' ? 'cloud-rain'
+                        <h2>Weather
+                            <!-- learned what is syntax for the bellow from chatGPT-->
+                            <i class="fas fa-${station.recentCodeConverted() === 'Rain' ? 'cloud-rain'
                         : station.recentCodeConverted() === 'Cloudy' ? 'cloud'
                         : station.recentCodeConverted() === 'Partial clouds' ? 'cloud-sun'
                         : station.recentCodeConverted() === 'Clear' ? 'sun'
@@ -44,6 +43,8 @@
                         : station.recentCodeConverted() === 'Snow' ? 'snowflake'
                         : station.recentCodeConverted() === 'Thunder' ? 'cloud-bolt'
                         : ''}"></i>
+                        </h2>
+                        ${station.recentCodeConverted()}
                         <br>
                         <br>
                         <br>
@@ -60,14 +61,15 @@
                 <div class="card-content">
 
                     <div class="content has-text-centered">
-                        <h2>Temp</h2>
-                        ${station.recentTemperatureC()} C <br>
-                        ${station.recentTemperatureF()} F
-                        <i class="fas fa-${station.recentTemperatureC() >= 20 ? 'temperature-high'
+                        <h2>Temp
+                            <i class="fas fa-${station.recentTemperatureC() >= 20 ? 'temperature-high'
                         : station.recentTemperatureC() >= 10 ? 'temperature-half'
                         : station.recentTemperatureC() >= 0 ? 'temperature-low'
                         : station.recentTemperatureC() < 0 ? 'temperature-low'
                         : ''}"></i>
+                        </h2>
+                        ${station.recentTemperatureC()} C <br>
+                        ${station.recentTemperatureF()} F
                         <br>
                         <br>
                     </div>
@@ -83,7 +85,9 @@
                 <div class="card-content">
 
                     <div class="content has-text-centered">
-                        <h2>Wind</h2>
+                        <h2>Wind
+                            <i class="fas fa-wind"></i>
+                        </h2>
                         ${station.recentWindSpeedBeaufort()} bft
                         (${station.recentWindSpeedBeaufortLabel()}) <br>
                         ${station.recentWindDirection()} <br>
@@ -101,7 +105,9 @@
                 <div class="card-content">
 
                     <div class="content has-text-centered">
-                        <h2>Pressure</h2>
+                        <h2>Pressure
+                            <i class="fas fa-gauge"></i>
+                        </h2>
                         ${station.recentPressure()} hpa
                         <br>
                         <br>
