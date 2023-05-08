@@ -16,15 +16,14 @@ public class Dashboard extends Controller
     List<Station> stations = member.stations;
     render ("dashboard.html", stations);
   }
-  public static void addStation (String name)
+  public static void addStation (String name, double lat, double lng)
   {
     Logger.info ("Adding a new playlist called " + name);
     Member member = Accounts.getLoggedInMember();
-    Station station = new Station (name);
+    Station station = new Station (name,lat,lng);
     member.stations.add(station);
     member.save();
     redirect ("/dashboard");
   }
-
 }
 
