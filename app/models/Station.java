@@ -97,7 +97,34 @@ public String recentWindSpeedBeaufort(){
       return 0;
   }
 
+  /*
+   ** Methods to display min and max value
+   */
+  public double lowestTemperatureC() {
+    if (readings.size() != 0) {
+      double lowestTemperature = readings.get(0).getTemperature();
+      for (int i = 1; i < readings.size(); i++) {
+        if (readings.get(i).getTemperature() < lowestTemperature) {
+          lowestTemperature = readings.get(i).getTemperature();
+        }
+      }
+      return lowestTemperature;
+    } else
+      return 0;
+  }
 
+  public double highestTemperatureC() {
+    if (readings.size() != 0) {
+      double highestTemperature = readings.get(0).getTemperature();
+      for (int i = 1; i < readings.size(); i++) {
+        if (readings.get(i).getTemperature() > highestTemperature) {
+          highestTemperature = readings.get(i).getTemperature();
+        }
+      }
+      return highestTemperature;
+    } else
+      return 0;
+  }
   /*
   ** Conversion bespoke methods
    */
