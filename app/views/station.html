@@ -71,6 +71,9 @@
                         : station.recentTemperatureC() >= 0 ? 'temperature-low'
                         : station.recentTemperatureC() < 0 ? 'temperature-low'
                         : ''}"></i>
+                            <i class="fas fa-${station.recentTrendTemperature() == 'Increasing' ? 'arrow-up'
+                        : station.recentTrendTemperature() == 'Decreasing' ? 'arrow-down'
+                        : ''}"></i>
                         </h2>
                         ${station.recentTemperatureC()} C <br>
                         ${station.recentTemperatureF()} F <br>
@@ -92,6 +95,9 @@
                     <div class="content has-text-centered">
                         <h2>Wind
                             <i class="fas fa-wind"></i>
+                            <i class="fas fa-${station.recentTrendWindSpeed() == 'Increasing' ? 'arrow-up'
+                        : station.recentTrendWindSpeed() == 'Decreasing' ? 'arrow-down'
+                        : ''}"></i>
                         </h2>
                         ${station.recentWindSpeedBeaufort()} bft
                         (${station.recentWindSpeedBeaufortLabel()}) <br>
@@ -114,6 +120,9 @@
                     <div class="content has-text-centered">
                         <h2>Pressure
                             <i class="fas fa-gauge"></i>
+                            <i class="fas fa-${station.recentTrendPressure() == 'Increasing' ? 'arrow-up'
+                        : station.recentTrendPressure() == 'Decreasing' ? 'arrow-down'
+                        : ''}"></i>
                         </h2>
                         ${station.recentPressure()} hpa <br>
                         Max: ${station.highestPressure()} <br>

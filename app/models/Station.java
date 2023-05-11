@@ -33,6 +33,43 @@ public class Station extends Model {
   public double getLng(){
     return lng;
   }
+
+  /*
+   ** Trends bespoke methods
+   */
+  public String recentTrendTemperature(){
+    if(readings.size() > 1) {
+      if( readings.get(readings.size() - 1).getTemperature() > readings.get(readings.size() - 2).getTemperature()){
+      return "Increasing";
+    } else if ( readings.get(readings.size() - 1).getTemperature() < readings.get(readings.size() - 2).getTemperature()){
+        return "Decreasing";}
+      else return "not changed";
+      } else
+      return null;
+  }
+
+  public String recentTrendWindSpeed(){
+    if(readings.size() > 1) {
+      if( readings.get(readings.size() - 1).getWindSpeed() > readings.get(readings.size() - 2).getWindSpeed()){
+        return "Increasing";
+      } else if ( readings.get(readings.size() - 1).getWindSpeed() < readings.get(readings.size() - 2).getWindSpeed()){
+        return "Decreasing";}
+      else return "not changed";
+    } else
+      return null;
+  }
+
+  public String recentTrendPressure(){
+    if(readings.size() > 1) {
+      if( readings.get(readings.size() - 1).getPressure() > readings.get(readings.size() - 2).getPressure()){
+        return "Increasing";
+      } else if ( readings.get(readings.size() - 1).getPressure() < readings.get(readings.size() - 2).getPressure()){
+        return "Decreasing";}
+      else return "not changed";
+    } else
+      return null;
+  }
+
   /*
    ** Recent data bespoke methods
    */
@@ -302,5 +339,4 @@ public String recentWindSpeedBeaufort(){
     double result = (13.12 + 0.6215 * tempreratureC - 11.37*Math.pow(windSpeed, 0.16) + 0.3965*tempreratureC*Math.pow(windSpeed, 0.16));
     return Math.round(result * 10.0) / 10.0;
   }
-
 }
