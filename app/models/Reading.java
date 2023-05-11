@@ -6,6 +6,8 @@ import play.db.jpa.Model;
 
 @Entity
 public class Reading extends Model {
+
+  public long timestamp;
   public int code;
   public double temperature;
   public double windSpeed;
@@ -13,12 +15,15 @@ public class Reading extends Model {
   public double windDirection;
 
   public Reading(int code, double temperature, double windSpeed, int pressure, double windDirection) {
+    this.timestamp = System.currentTimeMillis();
     this.code = code;
     this.temperature = temperature;
     this.windSpeed = windSpeed;
     this.pressure = pressure;
     this.windDirection = windDirection;
   }
+
+  public long getTimeStamp() {return timestamp;}
   public int getCode(){return code;}
   public double getTemperature(){
     return temperature;
