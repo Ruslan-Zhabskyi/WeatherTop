@@ -100,6 +100,32 @@ public String recentWindSpeedBeaufort(){
   /*
    ** Methods to display min and max value
    */
+
+  public double lowestWindSpeed() {
+    if (readings.size() != 0) {
+      double lowestWindSpeed = readings.get(0).getWindSpeed();
+      for (int i = 1; i < readings.size(); i++) {
+        if (readings.get(i).getWindSpeed() < lowestWindSpeed) {
+          lowestWindSpeed = readings.get(i).getWindSpeed();
+        }
+      }
+      return lowestWindSpeed;
+    } else
+      return 0;
+  }
+
+  public double highestWindSpeed() {
+    if (readings.size() != 0) {
+      double highestWindSpeed = readings.get(0).getWindSpeed();
+      for (int i = 1; i < readings.size(); i++) {
+        if (readings.get(i).getWindSpeed() > highestWindSpeed) {
+          highestWindSpeed = readings.get(i).getWindSpeed();
+        }
+      }
+      return highestWindSpeed;
+    } else
+      return 0;
+  }
   public double lowestTemperatureC() {
     if (readings.size() != 0) {
       double lowestTemperature = readings.get(0).getTemperature();
