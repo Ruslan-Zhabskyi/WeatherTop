@@ -26,6 +26,11 @@
     <td>
       ${reading.pressure}
     </td>
+    <td>
+      <a href="/stations/${_station.id}/deleteReading/${reading.id}" class="icon has-text-danger">
+        <i class="fas fa-trash"></i>
+      </a>
+    </td>
   </tr>
   #{/list}
   </tbody>

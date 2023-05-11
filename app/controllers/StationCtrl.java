@@ -25,4 +25,14 @@ public class StationCtrl extends Controller
     redirect ("/stations/" + id);
   }
 
+  public static void deleteReading (Long id, Long readingId)
+  {
+    Station station = Station.findById(id);
+    Reading reading  = Reading.findById(readingId);
+    Logger.info ("Removing" + readingId);
+    station.readings.remove(reading);
+    station.save();
+    reading.delete();
+    render("station.html", station);
+  }
 }
