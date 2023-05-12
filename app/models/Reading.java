@@ -4,12 +4,18 @@ import javax.persistence.Entity;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+//time advised and provided by Kieron Garvey
+//link to the source provided by Kieron https://howtodoinjava.com/java/date-time/java8-datetimeformatter-example/
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import play.db.jpa.Model;
 
 @Entity
 public class Reading extends Model {
 
-  public long date;
+  public String date;
   public int code;
   public double temperature;
   public double windSpeed;
@@ -17,7 +23,9 @@ public class Reading extends Model {
   public double windDirection;
 
   public Reading(int code, double temperature, double windSpeed, int pressure, double windDirection) {
-    this.date = System.currentTimeMillis();
+//    two lines of code bellow Kieron Garvey
+    DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"); //Create DateTimeFormatter
+    this.date = FORMATTER.format(LocalDateTime.now()); //Get Current Date Time & Set formatted String
     this.code = code;
     this.temperature = temperature;
     this.windSpeed = windSpeed;
@@ -25,7 +33,7 @@ public class Reading extends Model {
     this.windDirection = windDirection;
   }
 
-  public long getDate() {return this.date;}
+  public String getDate() {return this.date;}
 
   public int getCode(){return code;}
   public double getTemperature(){
