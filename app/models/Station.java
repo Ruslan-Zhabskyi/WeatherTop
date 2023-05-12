@@ -38,34 +38,40 @@ public class Station extends Model {
    ** Trends bespoke methods
    */
   public String recentTrendTemperature(){
-    if(readings.size() > 1) {
-      if( readings.get(readings.size() - 1).getTemperature() > readings.get(readings.size() - 2).getTemperature()){
+    if(readings.size() > 2) {
+      if( (readings.get(readings.size() - 1).getTemperature()) > readings.get(readings.size() - 2).getTemperature()
+      && (readings.get(readings.size() - 2).getTemperature()) > readings.get(readings.size() - 3).getTemperature()){
       return "Increasing";
-    } else if ( readings.get(readings.size() - 1).getTemperature() < readings.get(readings.size() - 2).getTemperature()){
+    } else if ( (readings.get(readings.size() - 1).getTemperature()) < readings.get(readings.size() - 2).getTemperature()
+          && (readings.get(readings.size() - 2).getTemperature()) < readings.get(readings.size() - 3).getTemperature()){
         return "Decreasing";}
-      else return "not changed";
+      else return "Steady";
       } else
       return null;
   }
 
   public String recentTrendWindSpeed(){
-    if(readings.size() > 1) {
-      if( readings.get(readings.size() - 1).getWindSpeed() > readings.get(readings.size() - 2).getWindSpeed()){
+    if(readings.size() > 2) {
+      if( (readings.get(readings.size() - 1).getWindSpeed()) > readings.get(readings.size() - 2).getWindSpeed()
+          && (readings.get(readings.size() - 2).getWindSpeed()) > readings.get(readings.size() - 3).getWindSpeed()){
         return "Increasing";
-      } else if ( readings.get(readings.size() - 1).getWindSpeed() < readings.get(readings.size() - 2).getWindSpeed()){
+      } else if( (readings.get(readings.size() - 1).getWindSpeed()) < readings.get(readings.size() - 2).getWindSpeed()
+          && (readings.get(readings.size() - 2).getWindSpeed()) < readings.get(readings.size() - 3).getWindSpeed()){
         return "Decreasing";}
-      else return "not changed";
+      else return "Steady";
     } else
       return null;
   }
 
   public String recentTrendPressure(){
-    if(readings.size() > 1) {
-      if( readings.get(readings.size() - 1).getPressure() > readings.get(readings.size() - 2).getPressure()){
+    if(readings.size() > 2) {
+      if( (readings.get(readings.size() - 1).getPressure()) > readings.get(readings.size() - 2).getPressure()
+          && (readings.get(readings.size() - 2).getPressure()) > readings.get(readings.size() - 3).getPressure()){
         return "Increasing";
-      } else if ( readings.get(readings.size() - 1).getPressure() < readings.get(readings.size() - 2).getPressure()){
+      } else if( (readings.get(readings.size() - 1).getPressure()) < readings.get(readings.size() - 2).getPressure()
+          && (readings.get(readings.size() - 2).getPressure()) < readings.get(readings.size() - 3).getPressure()){
         return "Decreasing";}
-      else return "not changed";
+      else return "Steady";
     } else
       return null;
   }
