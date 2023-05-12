@@ -1,13 +1,15 @@
 package models;
 
 import javax.persistence.Entity;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import play.db.jpa.Model;
 
 @Entity
 public class Reading extends Model {
 
-  public long timestamp;
+  public long date;
   public int code;
   public double temperature;
   public double windSpeed;
@@ -15,7 +17,7 @@ public class Reading extends Model {
   public double windDirection;
 
   public Reading(int code, double temperature, double windSpeed, int pressure, double windDirection) {
-    this.timestamp = System.currentTimeMillis();
+    this.date = System.currentTimeMillis();
     this.code = code;
     this.temperature = temperature;
     this.windSpeed = windSpeed;
@@ -23,7 +25,8 @@ public class Reading extends Model {
     this.windDirection = windDirection;
   }
 
-  public long getTimeStamp() {return timestamp;}
+  public long getDate() {return this.date;}
+
   public int getCode(){return code;}
   public double getTemperature(){
     return temperature;
