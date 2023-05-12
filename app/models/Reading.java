@@ -24,7 +24,7 @@ public class Reading extends Model {
 
   public Reading(int code, double temperature, double windSpeed, int pressure, double windDirection) {
 //    two lines of code bellow Kieron Garvey
-    DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"); //Create DateTimeFormatter
+    DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); //Create DateTimeFormatter
     this.date = FORMATTER.format(LocalDateTime.now()); //Get Current Date Time & Set formatted String
     this.code = code;
     this.temperature = temperature;
