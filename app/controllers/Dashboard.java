@@ -1,5 +1,7 @@
 package controllers;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import models.Member;
@@ -14,6 +16,10 @@ public class Dashboard extends Controller
     Logger.info("Rendering Admin");
     Member member = Accounts.getLoggedInMember();
     List<Station> stations = member.stations;
+    //The two lines bellow were copied from https://howtodoinjava.com/java/sort/java-sorting/ 1.3. Sorting with Lambda Expressions
+    Comparator<Station> nameSorter = (a, b) -> a.getName().compareToIgnoreCase(b.getName());
+    Collections.sort(stations, nameSorter);
+
     render ("dashboard.html", stations);
   }
   public static void addStation (String name, double lat, double lng)

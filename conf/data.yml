@@ -6,21 +6,21 @@ Reading(r1):
   windDirection: 220
   pressure: 1001
 Reading(r2):
-  date: "2021-01-19 08:31:00"
+  date: "2021-01-20 09:34:00"
   code: 600
   temperature: 6.0
   windSpeed: 2
   windDirection: 200
   pressure: 1004
 Reading(r3):
-  date: "2021-01-19 08:31:00"
+  date: "2021-01-20 10:31:00"
   code: 700
   temperature: 8.0
   windSpeed: 1
   windDirection: 90
   pressure: 1000
 Reading(r4):
-  date: "2021-01-19 08:31:00"
+  date: "2022-01-19 08:39:00"
   code: 200
   temperature: 0.5
   windSpeed: 3.5

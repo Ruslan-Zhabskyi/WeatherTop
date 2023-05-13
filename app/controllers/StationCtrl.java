@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.Comparator;
 import java.util.List;
 
 import models.Station;
@@ -29,10 +30,11 @@ public class StationCtrl extends Controller
   {
     Station station = Station.findById(id);
     Reading reading  = Reading.findById(readingId);
-    Logger.info ("Removing" + readingId);
+    Logger.info ("Removing reading: " + readingId);
     station.readings.remove(reading);
     station.save();
     reading.delete();
     render("station.html", station);
   }
+
 }
