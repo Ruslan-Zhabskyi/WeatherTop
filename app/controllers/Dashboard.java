@@ -19,7 +19,6 @@ public class Dashboard extends Controller
     //The two lines bellow were copied from https://howtodoinjava.com/java/sort/java-sorting/ 1.3. Sorting with Lambda Expressions
     Comparator<Station> nameSorter = (a, b) -> a.getName().compareToIgnoreCase(b.getName());
     Collections.sort(stations, nameSorter);
-
     render ("dashboard.html", stations);
   }
   public static void addStation (String name, double lat, double lng)
