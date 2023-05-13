@@ -6,6 +6,7 @@
 #{list items:stations, as:'station'}
 
 <div class="content box">
+
     <div class="columns">
 
         <div class="column is-one-fifth">
@@ -23,8 +24,10 @@
                         <br>
                         <br>
                     </div>
+
                 </div>
             </div>
+
         </div>
 
         <div class="column is-one-fifth">
@@ -34,16 +37,35 @@
 
                     <div class="content has-text-centered">
                         <h2>Weather
-                            <!-- learned what is syntax for the bellow from chatGPT-->
-                            <i class="fas fa-${station.recentCodeConverted() === 'Rain' ? 'cloud-rain'
-                        : station.recentCodeConverted() === 'Cloudy' ? 'cloud'
-                        : station.recentCodeConverted() === 'Partial clouds' ? 'cloud-sun'
-                        : station.recentCodeConverted() === 'Clear' ? 'sun'
-                        : station.recentCodeConverted() === 'Light Showers' ? 'cloud-sun-rain'
-                        : station.recentCodeConverted() === 'Heavy Showers' ? 'cloud-showers-heavy'
-                        : station.recentCodeConverted() === 'Snow' ? 'snowflake'
-                        : station.recentCodeConverted() === 'Thunder' ? 'cloud-bolt'
-                        : ''}"></i>
+                            <!--                            Conditional constructs-->
+                            #{if station.recentCodeConverted() === 'Rain'}
+                            <i class="fas fa-cloud-rain"></i>
+                            #{/if}
+                            #{elseif station.recentCodeConverted() === 'Cloudy'}
+                            <i class="fas fa-cloud"></i>
+                            #{/elseif}
+                            #{elseif station.recentCodeConverted() === 'Partial clouds'}
+                            <i class="fas fa-cloud-sun"></i>
+                            #{/elseif}
+                            #{elseif station.recentCodeConverted() === 'Clear'}
+                            <i class="fas fa-sun"></i>
+                            #{/elseif}
+                            #{elseif station.recentCodeConverted() === 'Light Showers'}
+                            <i class="fas fa-cloud-sun-rain"></i>
+                            #{/elseif}
+                            #{elseif station.recentCodeConverted() === 'Heavy Showers'}
+                            <i class="fas fa-cloud-showers-heavy"></i>
+                            #{/elseif}
+                            #{elseif station.recentCodeConverted() === 'Snow'}
+                            <i class="fas fa-snowflake"></i>
+                            #{/elseif}
+                            #{elseif station.recentCodeConverted() === 'Thunder'}
+                            <i class="fas fa-cloud-bolt"></i>
+                            #{/elseif}
+                            #{else}
+                            <i></i>
+                            #{/else}
+
                         </h2>
                         ${station.recentCodeConverted()}
                         <br>
@@ -65,14 +87,32 @@
 
                     <div class="content has-text-centered">
                         <h2>Temp
-                            <i class="fas fa-${station.recentTemperatureC() >= 20 ? 'temperature-high'
-                        : station.recentTemperatureC() >= 10 ? 'temperature-half'
-                        : station.recentTemperatureC() >= 0 ? 'temperature-low'
-                        : station.recentTemperatureC() < 0 ? 'temperature-low'
-                        : ''}"></i>
-                            <i class="fas fa-${station.recentTrendTemperature() == 'Increasing' ? 'arrow-up'
-                        : station.recentTrendTemperature() == 'Decreasing' ? 'arrow-down'
-                        : ''}"></i>
+                            #{if station.recentTemperatureC() >= 20}
+                            <i class="fas fa-temperature-high"></i>
+                            #{/if}
+                            #{elseif station.recentTemperatureC() >= 10}
+                            <i class="fas fa-temperature-half"></i>
+                            #{/elseif}
+                            #{elseif station.recentTemperatureC() >= 0}
+                            <i class="fas fa-temperature-low"></i>
+                            #{/elseif}
+                            #{elseif station.recentTemperatureC() < 0}
+                            <i class="fas fa-temperature-low"></i>
+                            #{/elseif}
+                            #{else}
+                            <i></i>
+                            #{/else}
+
+                            #{if station.recentTrendTemperature() == 'Increasing'}
+                            <i class="fas fa-arrow-up"></i>
+                            #{/if}
+                            #{elseif station.recentTrendTemperature() == 'Decreasing'}
+                            <i class="fas fa-arrow-down"></i>
+                            #{/elseif}
+                            #{else}
+                            <i></i>
+                            #{/else}
+
                         </h2>
                         ${station.recentTemperatureC()} C <br>
                         ${station.recentTemperatureF()} F <br>
@@ -94,9 +134,17 @@
                     <div class="content has-text-centered">
                         <h2>Wind
                             <i class="fas fa-wind"></i>
-                            <i class="fas fa-${station.recentTrendWindSpeed() == 'Increasing' ? 'arrow-up'
-                        : station.recentTrendWindSpeed() == 'Decreasing' ? 'arrow-down'
-                        : ''}"></i>
+
+                            #{if station.recentTrendWindSpeed() == 'Increasing'}
+                            <i class="fas fa-arrow-up"></i>
+                            #{/if}
+                            #{elseif station.recentTrendWindSpeed() == 'Decreasing'}
+                            <i class="fas fa-arrow-down"></i>
+                            #{/elseif}
+                            #{else}
+                            <i></i>
+                            #{/else}
+
                         </h2>
                         ${station.recentWindSpeedBeaufort()} bft
                         (${station.recentWindSpeedBeaufortLabel()}) <br>
@@ -119,9 +167,17 @@
                     <div class="content has-text-centered">
                         <h2>Pressure
                             <i class="fas fa-gauge"></i>
-                            <i class="fas fa-${station.recentTrendPressure() == 'Increasing' ? 'arrow-up'
-                        : station.recentTrendPressure() == 'Decreasing' ? 'arrow-down'
-                        : ''}"></i>
+
+                            #{if station.recentTrendPressure() == 'Increasing'}
+                            <i class="fas fa-arrow-up"></i>
+                            #{/if}
+                            #{elseif station.recentTrendPressure() == 'Decreasing'}
+                            <i class="fas fa-arrow-down"></i>
+                            #{/elseif}
+                            #{else}
+                            <i></i>
+                            #{/else}
+
                         </h2>
                         ${station.recentPressure()} hpa <br>
                         Max: ${station.highestPressure()} <br>
