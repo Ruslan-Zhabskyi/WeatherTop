@@ -19,10 +19,10 @@ public class Reading extends Model {
   public int code;
   public double temperature;
   public double windSpeed;
-  public int pressure;
+  public double pressure;
   public double windDirection;
 
-  public Reading(int code, double temperature, double windSpeed, int pressure, double windDirection) {
+  public Reading(int code, double temperature, double windSpeed, double pressure, double windDirection) {
 //    two lines of code bellow by Kieron Garvey
     DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); //Create DateTimeFormatter
     this.date = FORMATTER.format(LocalDateTime.now()); //Get Current Date Time & Set formatted String
@@ -42,7 +42,7 @@ public class Reading extends Model {
   public double getWindSpeed(){
     return windSpeed;
   }
-  public int getPressure(){
+  public double getPressure(){
     return pressure;
   }
   public double getWindDirection() { return windDirection;}

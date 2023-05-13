@@ -133,7 +133,7 @@ public String recentWindSpeedBeaufort(){
     return windSpeedBeaufortConversionLabel(recentWindSpeed());
   }
 
-  public int recentPressure() {
+  public double recentPressure() {
     if (readings.size() != 0) {
       Reading recentPressure = readings.get(readings.size() - 1);
       return recentPressure.getPressure();

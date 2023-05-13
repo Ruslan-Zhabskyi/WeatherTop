@@ -4,7 +4,7 @@ Reading(r1):
   temperature: 0.5
   windSpeed: 3.5
   windDirection: 220
-  pressure: 1001
+  pressure: 1001.5
 Reading(r2):
   date: "2021-01-20 09:34:00"
   code: 600
