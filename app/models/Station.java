@@ -91,7 +91,7 @@ public class Station extends Model {
   }
 
   public double recentWindFeelsLike(){
-    return windChillCalculator(recentTemperatureC(),recentWindSpeed());
+    return StationAnalytics.windChillCalculator(recentTemperatureC(),recentWindSpeed());
   }
   public int recentCode() {
     if (readings.size() != 0) {
@@ -220,11 +220,5 @@ public String recentWindSpeedBeaufort(){
       return highestTemperature;
     } else
       return 0;
-  }
-
-
-  public double windChillCalculator(double tempreratureC, double windSpeed){
-    double result = (13.12 + 0.6215 * tempreratureC - 11.37*Math.pow(windSpeed, 0.16) + 0.3965*tempreratureC*Math.pow(windSpeed, 0.16));
-    return Math.round(result * 10.0) / 10.0;
   }
 }

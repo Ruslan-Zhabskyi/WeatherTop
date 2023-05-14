@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import play.db.jpa.Model;
+import utils.StationAnalytics;
 
 @Entity
 public class Reading extends Model {

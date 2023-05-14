@@ -9,6 +9,10 @@ public class StationAnalytics {
   /*
    ** Conversion bespoke methods
    */
+  public static double windChillCalculator(double tempreratureC, double windSpeed){
+    double result = (13.12 + 0.6215 * tempreratureC - 11.37*Math.pow(windSpeed, 0.16) + 0.3965*tempreratureC*Math.pow(windSpeed, 0.16));
+    return Math.round(result * 10.0) / 10.0;
+  }
   public static double celsiusToFahrenheit(double temperatureInСelsius) {
     // Convert temperature from Celsius to Fahrenheit using the formula F = (C * 9/5) + 32
     double temperatureInFahrenheit = temperatureInСelsius * 9 / 5 + 32;
@@ -127,17 +131,4 @@ public class StationAnalytics {
       return "Unknown code";
     }
   }
-
-//  public static Song getShortestSong(List<Song> songs) {
-//    Song shortestSong = null;
-//    if (songs.size() > 0) {
-//      shortestSong = songs.get(0);
-//      for (Song song : songs) {
-//        if (song.duration < shortestSong.duration) {
-//          shortestSong = song;
-//        }
-//      }
-//    }
-//    return shortestSong;
-//  }
 }
