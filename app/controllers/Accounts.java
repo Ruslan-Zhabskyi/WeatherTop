@@ -23,7 +23,18 @@ public class Accounts extends Controller
     member.save();
     redirect("/");
   }
-
+  public static void updateUser (String firstname, String lastname, String email, String password)
+  {
+    Logger.info("Updating user " + email);
+    Member member = Member.findByEmail(email);
+    if (member != null) {
+      member.firstname = firstname;
+      member.lastname = lastname;
+      member.password = password;
+      member.save();
+    }
+    redirect("/user");
+  }
   public static void authenticate(String email, String password)
   {
     Logger.info("Attempting to authenticate with " + email + ":" + password);

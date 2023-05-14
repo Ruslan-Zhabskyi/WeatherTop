@@ -14,7 +14,7 @@
           <div class="field-body">
             <div class="field">
               <p class="control">
-               <input class="input" type="text" placeholder= ${member.firstname} name="firstname">
+               <input class="input" type="text" value= ${member.firstname} name="firstname">
             </p>
             </div>
           </div>
@@ -27,7 +27,7 @@
           <div class="field-body">
             <div class="field">
               <p class="control">
-                <input class="input" type="text" placeholder= ${member.lastname} name="lastname">
+                <input class="input" type="text" value= ${member.lastname} name="lastname">
               </p>
             </div>
           </div>
@@ -40,7 +40,7 @@
           <div class="field-body">
             <div class="field">
               <p class="control">
-                <input class="input" placeholder= ${member.email} name="email">
+                <input class="input" value= ${member.email} name="email" readonly>
               </p>
             </div>
           </div>
@@ -53,13 +53,13 @@
           <div class="field-body">
             <div class="field">
               <p class="control">
-                <input class="input" type="password" name="password">
+                <input class="input" value= ${member.password} type="password" name="password">
               </p>
             </div>
           </div>
         </div>
 
-        <button class="button is-link is-dark">Save</button>
+        <button class="button is-link is-info">Save</button>
       </form>
 
     </div>

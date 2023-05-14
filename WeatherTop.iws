@@ -8,9 +8,12 @@
       <change beforePath="$PROJECT_DIR$/Template_1004$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1004$_run_closure1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template_1004.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1004.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template_1010$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1010$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1010.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1010.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherTop.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTop.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/updateuserdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/updateuserdetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/userdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/userdetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +97,7 @@
       <workItem from="1683230706745" duration="7000" />
       <workItem from="1683233694244" duration="2881000" />
       <workItem from="1683367991094" duration="359000" />
-      <workItem from="1683460210279" duration="44423000" />
+      <workItem from="1683460210279" duration="47516000" />
     </task>
     <servers />
   </component>
