@@ -3,26 +3,26 @@
 #{welcomemenu id:"login"/}
 
 <section class="content box">
-  <div class="columns">
-    <div class="column is-half">
-      <form action="/authenticate" method="POST">
-        <h3 class="subtitle">Log-in</h3>
-        <div class="field">
-          <label class="label">Email</label>
-          <input class="input" placeholder="Email" name="email">
+    <div class="columns">
+        <div class="column is-half">
+            <form action="/authenticate" method="POST">
+                <h3 class="subtitle">Log-in</h3>
+                <div class="field">
+                    <label class="label">Email</label>
+                    <input class="input" placeholder="Email" name="email">
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <input class="input" type="password" name="password">
+                </div>
+                <button class="button is-link is-dark">Login</button>
+            </form>
         </div>
-        <div class="field">
-          <label class="label">Password</label>
-          <input class="input" type="password" name="password">
-        </div>
-        <button class="button is-link is-dark">Login</button>
-      </form>
-    </div>
-    <div class="column is-half">
-      <figure class="image is-4by5 has-text-centered">
-        <img src="/public/images/weathertop-watch-tower.jpg" style="display: block;  margin-left: auto;
+        <div class="column is-half">
+            <figure class="image is-4by5 has-text-centered">
+                <img src="/public/images/weathertop-watch-tower.jpg" style="display: block;  margin-left: auto;
         margin-right: auto; max-width: 70%; max-height: 70%;">
-      </figure>
+            </figure>
+        </div>
     </div>
-  </div>
 </section>

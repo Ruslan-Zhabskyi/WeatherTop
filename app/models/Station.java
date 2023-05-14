@@ -27,54 +27,56 @@ public class Station extends Model {
     this.lng = lng;
   }
 
-  public String getName(){
+  public String getName() {
     return name;
   }
-  public double getLat(){
+
+  public double getLat() {
     return lat;
   }
-  public double getLng(){
+
+  public double getLng() {
     return lng;
   }
 
   /*
    ** Trends bespoke methods
    */
-  public String recentTrendTemperature(){
-    if(readings.size() > 2) {
-      if( (readings.get(readings.size() - 1).getTemperature()) > readings.get(readings.size() - 2).getTemperature()
-      && (readings.get(readings.size() - 2).getTemperature()) > readings.get(readings.size() - 3).getTemperature()){
-      return "Increasing";
-    } else if ( (readings.get(readings.size() - 1).getTemperature()) < readings.get(readings.size() - 2).getTemperature()
-          && (readings.get(readings.size() - 2).getTemperature()) < readings.get(readings.size() - 3).getTemperature()){
-        return "Decreasing";}
-      else return "Steady";
-      } else
-      return null;
-  }
-
-  public String recentTrendWindSpeed(){
-    if(readings.size() > 2) {
-      if( (readings.get(readings.size() - 1).getWindSpeed()) > readings.get(readings.size() - 2).getWindSpeed()
-          && (readings.get(readings.size() - 2).getWindSpeed()) > readings.get(readings.size() - 3).getWindSpeed()){
+  public String recentTrendTemperature() {
+    if (readings.size() > 2) {
+      if ((readings.get(readings.size() - 1).getTemperature()) > readings.get(readings.size() - 2).getTemperature()
+          && (readings.get(readings.size() - 2).getTemperature()) > readings.get(readings.size() - 3).getTemperature()) {
         return "Increasing";
-      } else if( (readings.get(readings.size() - 1).getWindSpeed()) < readings.get(readings.size() - 2).getWindSpeed()
-          && (readings.get(readings.size() - 2).getWindSpeed()) < readings.get(readings.size() - 3).getWindSpeed()){
-        return "Decreasing";}
-      else return "Steady";
+      } else if ((readings.get(readings.size() - 1).getTemperature()) < readings.get(readings.size() - 2).getTemperature()
+          && (readings.get(readings.size() - 2).getTemperature()) < readings.get(readings.size() - 3).getTemperature()) {
+        return "Decreasing";
+      } else return "Steady";
     } else
       return null;
   }
 
-  public String recentTrendPressure(){
-    if(readings.size() > 2) {
-      if( (readings.get(readings.size() - 1).getPressure()) > readings.get(readings.size() - 2).getPressure()
-          && (readings.get(readings.size() - 2).getPressure()) > readings.get(readings.size() - 3).getPressure()){
+  public String recentTrendWindSpeed() {
+    if (readings.size() > 2) {
+      if ((readings.get(readings.size() - 1).getWindSpeed()) > readings.get(readings.size() - 2).getWindSpeed()
+          && (readings.get(readings.size() - 2).getWindSpeed()) > readings.get(readings.size() - 3).getWindSpeed()) {
         return "Increasing";
-      } else if( (readings.get(readings.size() - 1).getPressure()) < readings.get(readings.size() - 2).getPressure()
-          && (readings.get(readings.size() - 2).getPressure()) < readings.get(readings.size() - 3).getPressure()){
-        return "Decreasing";}
-      else return "Steady";
+      } else if ((readings.get(readings.size() - 1).getWindSpeed()) < readings.get(readings.size() - 2).getWindSpeed()
+          && (readings.get(readings.size() - 2).getWindSpeed()) < readings.get(readings.size() - 3).getWindSpeed()) {
+        return "Decreasing";
+      } else return "Steady";
+    } else
+      return null;
+  }
+
+  public String recentTrendPressure() {
+    if (readings.size() > 2) {
+      if ((readings.get(readings.size() - 1).getPressure()) > readings.get(readings.size() - 2).getPressure()
+          && (readings.get(readings.size() - 2).getPressure()) > readings.get(readings.size() - 3).getPressure()) {
+        return "Increasing";
+      } else if ((readings.get(readings.size() - 1).getPressure()) < readings.get(readings.size() - 2).getPressure()
+          && (readings.get(readings.size() - 2).getPressure()) < readings.get(readings.size() - 3).getPressure()) {
+        return "Decreasing";
+      } else return "Steady";
     } else
       return null;
   }
@@ -82,17 +84,18 @@ public class Station extends Model {
   /*
    ** Recent data bespoke methods
    */
-  public String recentWindDirection(){
-    if(readings.size() != 0) {
+  public String recentWindDirection() {
+    if (readings.size() != 0) {
       Reading recentWindDirection = readings.get(readings.size() - 1);
       return StationAnalytics.windDirectionCompassConversion(recentWindDirection.getWindDirection());
     } else
       return null;
   }
 
-  public double recentWindFeelsLike(){
-    return StationAnalytics.windChillCalculator(recentTemperatureC(),recentWindSpeed());
+  public double recentWindFeelsLike() {
+    return StationAnalytics.windChillCalculator(recentTemperatureC(), recentWindSpeed());
   }
+
   public int recentCode() {
     if (readings.size() != 0) {
       Reading recentCode = readings.get(readings.size() - 1);
@@ -100,8 +103,9 @@ public class Station extends Model {
     } else
       return 0;
   }
+
   public String recentCodeConverted() {
-      return StationAnalytics.weatherCodes(recentCode());
+    return StationAnalytics.weatherCodes(recentCode());
   }
 
   public double recentTemperatureC() {
@@ -127,11 +131,11 @@ public class Station extends Model {
       return 0;
   }
 
-public String recentWindSpeedBeaufort(){
+  public String recentWindSpeedBeaufort() {
     return StationAnalytics.windSpeedBeaufortConversion(recentWindSpeed());
-}
+  }
 
-  public String recentWindSpeedBeaufortLabel(){
+  public String recentWindSpeedBeaufortLabel() {
     return StationAnalytics.windSpeedBeaufortConversionLabel(recentWindSpeed());
   }
 
@@ -171,6 +175,7 @@ public String recentWindSpeedBeaufort(){
     } else
       return 0;
   }
+
   public double lowestWindSpeed() {
     if (readings.size() != 0) {
       double lowestWindSpeed = readings.get(0).getWindSpeed();
@@ -196,6 +201,7 @@ public String recentWindSpeedBeaufort(){
     } else
       return 0;
   }
+
   public double lowestTemperatureC() {
     if (readings.size() != 0) {
       double lowestTemperature = readings.get(0).getTemperature();

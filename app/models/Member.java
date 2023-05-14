@@ -8,8 +8,7 @@ import javax.persistence.OneToMany;
 import java.util.*;
 
 @Entity
-public class Member extends Model
-{
+public class Member extends Model {
   public String firstname;
   public String lastname;
   public String email;
@@ -19,21 +18,18 @@ public class Member extends Model
 
   public List<Station> stations = new ArrayList<Station>();
 
-  public Member(String firstname, String lastname, String email, String password)
-  {
+  public Member(String firstname, String lastname, String email, String password) {
     this.firstname = firstname;
     this.lastname = lastname;
     this.email = email;
     this.password = password;
   }
 
-  public static Member findByEmail(String email)
-  {
+  public static Member findByEmail(String email) {
     return find("email", email).first();
   }
 
-  public boolean checkPassword(String password)
-  {
+  public boolean checkPassword(String password) {
     return this.password.equals(password);
   }
 }

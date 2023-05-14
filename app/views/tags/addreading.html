@@ -1,54 +1,54 @@
 <form action="/stations/${_station.id}/addreading" method="POST" xmlns="http://www.w3.org/1999/html">
-  <div class="columns">
+    <div class="columns">
 
-    <div class="column is-one-third">
-    <div class="field column">
-      <label class="label">Code</label>
-      <div class="control">
-        <input class="input" placeholder="Code" type="number" name="code">
-      </div>
+        <div class="column is-one-third">
+            <div class="field column">
+                <label class="label">Code</label>
+                <div class="control">
+                    <input class="input" placeholder="Code" type="number" name="code">
+                </div>
+            </div>
+        </div>
+        <div class="column is-one-third">
+            <div class="field column">
+                <label class="label">Temperature</label>
+                <div class="control">
+                    <input class="input" placeholder="Temperature" type="double" name="temperature">
+                </div>
+            </div>
+        </div>
+        <div class="column is-one-third">
+            <div class="field column">
+                <label class="label">Wind Speed</label>
+                <div class="control">
+                    <input class="input" placeholder="Wind Speed" type="double" name="windSpeed">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-one-third">
+            <div class="field column">
+                <label class="label">Wind Direction</label>
+                <div class="control">
+                    <input class="input" placeholder="Wind Direction" type="double" name="windDirection">
+                </div>
+            </div>
+        </div>
+        <div class="column is-one-third">
+            <div class="field column">
+                <label class="label">Pressure</label>
+                <div class="control">
+                    <input class="input" placeholder="Pressure" type="double" name="pressure">
+                </div>
+            </div>
+        </div>
     </div>
     </div>
-    <div class="column is-one-third">
-    <div class="field column">
-      <label class="label">Temperature</label>
-      <div class="control">
-        <input class="input" placeholder="Temperature" type="double" name="temperature">
-      </div>
+    <div class="field mt-4">
+        <div class="control">
+            <button class="button is-dark">Submit Report</button>
+        </div>
     </div>
-    </div>
-    <div class="column is-one-third">
-    <div class="field column">
-      <label class="label">Wind Speed</label>
-      <div class="control">
-        <input class="input" placeholder="Wind Speed" type="double" name="windSpeed">
-      </div>
-    </div>
-    </div>
-  </div>
-  <div class="columns">
-    <div class="column is-one-third">
-    <div class="field column">
-      <label class="label">Wind Direction</label>
-      <div class="control">
-        <input class="input" placeholder="Wind Direction" type="double" name="windDirection">
-      </div>
-    </div>
-    </div>
-    <div class="column is-one-third">
-    <div class="field column">
-      <label class="label">Pressure</label>
-      <div class="control">
-        <input class="input" placeholder="Pressure" type="double" name="pressure">
-      </div>
-    </div>
-    </div>
-  </div>
-  </div>
-  <div class="field mt-4">
-    <div class="control">
-      <button class="button is-dark">Submit Report</button>
-    </div>
-  </div>
 
 </form>

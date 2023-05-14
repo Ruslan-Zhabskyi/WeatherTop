@@ -34,18 +34,28 @@ public class Reading extends Model {
     this.windDirection = windDirection;
   }
 
-  public String getDate() {return this.date;}
+  public String getDate() {
+    return this.date;
+  }
 
-  public int getCode(){return code;}
-  public double getTemperature(){
+  public int getCode() {
+    return code;
+  }
+
+  public double getTemperature() {
     return temperature;
   }
-  public double getWindSpeed(){
+
+  public double getWindSpeed() {
     return windSpeed;
   }
-  public double getPressure(){
+
+  public double getPressure() {
     return pressure;
   }
-  public double getWindDirection() { return windDirection;}
+
+  public double getWindDirection() {
+    return windDirection;
+  }
 
 }

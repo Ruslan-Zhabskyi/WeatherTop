@@ -9,10 +9,11 @@ public class StationAnalytics {
   /*
    ** Conversion bespoke methods
    */
-  public static double windChillCalculator(double tempreratureC, double windSpeed){
-    double result = (13.12 + 0.6215 * tempreratureC - 11.37*Math.pow(windSpeed, 0.16) + 0.3965*tempreratureC*Math.pow(windSpeed, 0.16));
+  public static double windChillCalculator(double tempreratureC, double windSpeed) {
+    double result = (13.12 + 0.6215 * tempreratureC - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * tempreratureC * Math.pow(windSpeed, 0.16));
     return Math.round(result * 10.0) / 10.0;
   }
+
   public static double celsiusToFahrenheit(double temperatureInСelsius) {
     // Convert temperature from Celsius to Fahrenheit using the formula F = (C * 9/5) + 32
     double temperatureInFahrenheit = temperatureInСelsius * 9 / 5 + 32;
@@ -21,17 +22,26 @@ public class StationAnalytics {
     return temperatureInFahrenheit;
   }
 
-  public static String weatherCodes(int option){
-    switch(option){
-      case 100: return "Clear";
-      case 200: return "Partial clouds";
-      case 300: return "Cloudy";
-      case 400: return "Light Showers";
-      case 500: return "Heavy Showers";
-      case 600: return "Rain";
-      case 700: return "Snow";
-      case 800: return "Thunder";
-      default: return "Unknown code";
+  public static String weatherCodes(int option) {
+    switch (option) {
+      case 100:
+        return "Clear";
+      case 200:
+        return "Partial clouds";
+      case 300:
+        return "Cloudy";
+      case 400:
+        return "Light Showers";
+      case 500:
+        return "Heavy Showers";
+      case 600:
+        return "Rain";
+      case 700:
+        return "Snow";
+      case 800:
+        return "Thunder";
+      default:
+        return "Unknown code";
     }
   }
 
@@ -94,6 +104,7 @@ public class StationAnalytics {
       return "Unknown code";
     }
   }
+
   public static String windDirectionCompassConversion(double option) {
     if (option >= 348.75 || option < 11.25) {
       return "North";

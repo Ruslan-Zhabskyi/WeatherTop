@@ -1,41 +1,41 @@
 <table class="table">
-  <thead>
-  <tr>
-    <th>Date</th>
-    <th>Code</th>
-    <th>Temperature</th>
-    <th>Wind Speed</th>
-    <th>Wind Direction</th>
-    <th>Pressure</th>
-  </tr>
-  </thead>
-  <tbody>
-  #{list items:_station.readings, as:'reading'}
-  <tr>
-    <td>
-      ${reading.date}
-    </td>
-    <td>
-      ${reading.code}
-    </td>
-    <td>
-      ${reading.temperature}
-    </td>
-    <td>
-      ${reading.windSpeed}
-    </td>
-    <td>
-      ${reading.windDirection}
-    </td>
-    <td>
-      ${reading.pressure}
-    </td>
-    <td>
-      <a href="/stations/${_station.id}/deleteReading/${reading.id}" class="icon has-text-danger">
-        <i class="fas fa-trash"></i>
-      </a>
-    </td>
-  </tr>
-  #{/list}
-  </tbody>
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Code</th>
+        <th>Temperature</th>
+        <th>Wind Speed</th>
+        <th>Wind Direction</th>
+        <th>Pressure</th>
+    </tr>
+    </thead>
+    <tbody>
+    #{list items:_station.readings, as:'reading'}
+    <tr>
+        <td>
+            ${reading.date}
+        </td>
+        <td>
+            ${reading.code}
+        </td>
+        <td>
+            ${reading.temperature}
+        </td>
+        <td>
+            ${reading.windSpeed}
+        </td>
+        <td>
+            ${reading.windDirection}
+        </td>
+        <td>
+            ${reading.pressure}
+        </td>
+        <td>
+            <a href="/stations/${_station.id}/deleteReading/${reading.id}" class="icon has-text-danger">
+                <i class="fas fa-trash"></i>
+            </a>
+        </td>
+    </tr>
+    #{/list}
+    </tbody>
 </table>
