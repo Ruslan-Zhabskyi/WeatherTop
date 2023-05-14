@@ -3,10 +3,21 @@
 
 #{menu id:"dashboard"/}
 
+<div class="content box">
 #{list items:stations, as:'station'}
 #{cards stations:station/}
+    <p>
+        <a href="/stations/${station.id}" class="icon has-text-primary">
+            <i class="fas fa-folder"></i>
+        </a>
+
+        <a href="/dashboard/deleteStation/${station.id}" class="icon has-text-danger">
+            <i class="fas fa-trash"></i>
+        </a>
+    </p>
 #{/list}
 
+</div>
 <div class="content box">
     #{addstation /}
 </div>
