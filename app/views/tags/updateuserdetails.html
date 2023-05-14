@@ -1,0 +1,68 @@
+#{list items:_members, as:'member'}
+<div class="content box">
+  <div class="columns">
+
+    <div class="column is-one-fifth">
+
+      <form action="/updateuserdetails" method="POST">
+
+<!--        code below from https://bulma.io/documentation/form/input/-->
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <p>Firstname:</p>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+               <input class="input" type="text" placeholder= ${member.firstname} name="firstname">
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <p>Lastname:</p>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input" type="text" placeholder= ${member.lastname} name="lastname">
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <p>Email:</p>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input" placeholder= ${member.email} name="email">
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <p>Password:</p>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input" type="password" name="password">
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button class="button is-link is-dark">Save</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+#{/list}
