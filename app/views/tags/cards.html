@@ -1,6 +1,5 @@
 #{list items:_stations, as:'station'}
 
-
 <div class="columns">
 
     <div class="column is-one-fifth">
@@ -31,7 +30,7 @@
 
                 <div class="content has-text-centered">
                     <h2>Weather
-                        <!--                            Conditional constructs-->
+                        <!--Conditional constructs-->
                         #{if station.recentCodeConverted() === 'Rain'}
                         <i class="fas fa-cloud-rain"></i>
                         #{/if}
@@ -187,6 +186,5 @@
     </div>
 
 </div>
-
 
 #{/list}
