@@ -8,7 +8,7 @@ GET    /login                                   Accounts.login
 POST   /register                                Accounts.register
 POST   /authenticate                            Accounts.authenticate
 GET    /logout                                  Accounts.logout
-POST    /updateuserdetails                        Accounts.updateUser
+POST   /updateuserdetails                       Accounts.updateUser
 
 # Home page
 GET     /                                       Start.index
