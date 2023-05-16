@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b7c012d-60ef-4dbc-b666-92d60588a2e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/WeatherTop.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTop.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/cards.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clevercloud/play1_version" beforeDir="false" afterPath="$PROJECT_DIR$/clevercloud/play1_version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/dependencies.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/dependencies.yml" afterDir="false" />
-    </list>
+    <list default="true" id="8b7c012d-60ef-4dbc-b666-92d60588a2e8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +91,7 @@
       <workItem from="1683233694244" duration="2881000" />
       <workItem from="1683367991094" duration="359000" />
       <workItem from="1683460210279" duration="49044000" />
-      <workItem from="1684236610095" duration="3398000" />
+      <workItem from="1684236610095" duration="3619000" />
     </task>
     <servers />
   </component>
