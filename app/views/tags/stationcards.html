@@ -1,0 +1,187 @@
+#{list items:_station, as:'station'}
+
+<div class="columns">
+    <div class="column is-one-fifth">
+
+        <div class="card has-background-light">
+            <div class="card-content">
+
+                <div class="content has-text-centered">
+                    <h2>${station.getName()}
+                        <i class="fas fa-location-dot"></i>
+                    </h2>
+                    ${station.getLat()} <br>
+                    ${station.getLng()} <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="column is-one-fifth">
+
+        <div class="card has-background-light">
+            <div class="card-content">
+
+                <div class="content has-text-centered">
+                    <h2>Weather
+                        #{if station.recentCodeConverted() === 'Rain'}
+                        <i class="fas fa-cloud-rain"></i>
+                        #{/if}
+                        #{elseif station.recentCodeConverted() === 'Cloudy'}
+                        <i class="fas fa-cloud"></i>
+                        #{/elseif}
+                        #{elseif station.recentCodeConverted() === 'Partial clouds'}
+                        <i class="fas fa-cloud-sun"></i>
+                        #{/elseif}
+                        #{elseif station.recentCodeConverted() === 'Clear'}
+                        <i class="fas fa-sun"></i>
+                        #{/elseif}
+                        #{elseif station.recentCodeConverted() === 'Light Showers'}
+                        <i class="fas fa-cloud-sun-rain"></i>
+                        #{/elseif}
+                        #{elseif station.recentCodeConverted() === 'Heavy Showers'}
+                        <i class="fas fa-cloud-showers-heavy"></i>
+                        #{/elseif}
+                        #{elseif station.recentCodeConverted() === 'Snow'}
+                        <i class="fas fa-snowflake"></i>
+                        #{/elseif}
+                        #{elseif station.recentCodeConverted() === 'Thunder'}
+                        <i class="fas fa-cloud-bolt"></i>
+                        #{/elseif}
+                        #{else}
+                        <i></i>
+                        #{/else}
+                    </h2>
+                    ${station.recentCodeConverted()}
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="column is-one-fifth">
+
+        <div class="card has-background-light">
+            <div class="card-content">
+
+                <div class="content has-text-centered">
+                    <h2>Temp
+                        #{if station.recentTemperatureC() >= 20}
+                        <i class="fas fa-temperature-high"></i>
+                        #{/if}
+                        #{elseif station.recentTemperatureC() >= 10}
+                        <i class="fas fa-temperature-half"></i>
+                        #{/elseif}
+                        #{elseif station.recentTemperatureC() >= 0}
+                        <i class="fas fa-temperature-low"></i>
+                        #{/elseif}
+                        #{elseif station.recentTemperatureC() < 0}
+                        <i class="fas fa-temperature-low"></i>
+                        #{/elseif}
+                        #{else}
+                        <i></i>
+                        #{/else}
+
+                        #{if station.recentTrendTemperature() == 'Increasing'}
+                        <i class="fas fa-arrow-up"></i>
+                        #{/if}
+                        #{elseif station.recentTrendTemperature() == 'Decreasing'}
+                        <i class="fas fa-arrow-down"></i>
+                        #{/elseif}
+                        #{else}
+                        <i></i>
+                        #{/else}
+
+                    </h2>
+                    ${station.recentTemperatureC()} C <br>
+                    ${station.recentTemperatureF()} F <br>
+                    Max: ${station.highestTemperatureC()} <br>
+                    Min: ${station.lowestTemperatureC()} <br>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="column is-one-fifth">
+
+        <div class="card has-background-light">
+            <div class="card-content">
+
+                <div class="content has-text-centered">
+                    <h2>Wind
+                        <i class="fas fa-wind"></i>
+
+                        #{if station.recentTrendWindSpeed() == 'Increasing'}
+                        <i class="fas fa-arrow-up"></i>
+                        #{/if}
+                        #{elseif station.recentTrendWindSpeed() == 'Decreasing'}
+                        <i class="fas fa-arrow-down"></i>
+                        #{/elseif}
+                        #{else}
+                        <i></i>
+                        #{/else}
+
+                    </h2>
+                    ${station.recentWindSpeedBeaufort()} bft
+                    (${station.recentWindSpeedBeaufortLabel()}) <br>
+                    ${station.recentWindDirection()} <br>
+                    Feels like ${station.recentWindFeelsLike()} <br>
+                    Max: ${station.highestWindSpeed()} <br>
+                    Min: ${station.lowestWindSpeed()} <br>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="column is-one-fifth">
+
+        <div class="card has-background-light">
+            <div class="card-content">
+
+                <div class="content has-text-centered">
+                    <h2>Pressure
+                        <i class="fas fa-gauge"></i>
+
+                        #{if station.recentTrendPressure() == 'Increasing'}
+                        <i class="fas fa-arrow-up"></i>
+                        #{/if}
+                        #{elseif station.recentTrendPressure() == 'Decreasing'}
+                        <i class="fas fa-arrow-down"></i>
+                        #{/elseif}
+                        #{else}
+                        <i></i>
+                        #{/else}
+
+                    </h2>
+                    ${station.recentPressure()} hpa <br>
+                    Max: ${station.highestPressure()} <br>
+                    Min: ${station.lowestPressure()}
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+#{/list}
