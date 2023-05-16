@@ -29,28 +29,28 @@
 
                 <div class="content has-text-centered">
                     <h2>Weather
-                        #{if station.recentCodeConverted() === 'Rain'}
+                        #{if station.recentCodeConverted() == 'Rain'}
                         <i class="fas fa-cloud-rain"></i>
                         #{/if}
-                        #{elseif station.recentCodeConverted() === 'Cloudy'}
+                        #{elseif station.recentCodeConverted() == 'Cloudy'}
                         <i class="fas fa-cloud"></i>
                         #{/elseif}
-                        #{elseif station.recentCodeConverted() === 'Partial clouds'}
+                        #{elseif station.recentCodeConverted() == 'Partial clouds'}
                         <i class="fas fa-cloud-sun"></i>
                         #{/elseif}
-                        #{elseif station.recentCodeConverted() === 'Clear'}
+                        #{elseif station.recentCodeConverted() == 'Clear'}
                         <i class="fas fa-sun"></i>
                         #{/elseif}
-                        #{elseif station.recentCodeConverted() === 'Light Showers'}
+                        #{elseif station.recentCodeConverted() == 'Light Showers'}
                         <i class="fas fa-cloud-sun-rain"></i>
                         #{/elseif}
-                        #{elseif station.recentCodeConverted() === 'Heavy Showers'}
+                        #{elseif station.recentCodeConverted() == 'Heavy Showers'}
                         <i class="fas fa-cloud-showers-heavy"></i>
                         #{/elseif}
-                        #{elseif station.recentCodeConverted() === 'Snow'}
+                        #{elseif station.recentCodeConverted() == 'Snow'}
                         <i class="fas fa-snowflake"></i>
                         #{/elseif}
-                        #{elseif station.recentCodeConverted() === 'Thunder'}
+                        #{elseif station.recentCodeConverted() == 'Thunder'}
                         <i class="fas fa-cloud-bolt"></i>
                         #{/elseif}
                         #{else}
