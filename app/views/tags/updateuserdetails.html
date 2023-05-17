@@ -2,7 +2,7 @@
 <div class="content box">
     <div class="columns">
 
-        <div class="column is-one-quarter">
+        <div class="column is-two-fifths">
 
             <form action="/updateuserdetails" method="POST">
 
@@ -14,7 +14,7 @@
                     <div class="field-body">
                         <div class="field">
                             <p class="control">
-                                <input class="input" type="text" value=${member.firstname} name="firstname">
+                                <input class="input" type="text" value=${member.getFirstname()} name="firstname">
                             </p>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                     <div class="field-body">
                         <div class="field">
                             <p class="control">
-                                <input class="input" type="text" value=${member.lastname} name="lastname">
+                                <input class="input" type="text" value=${member.getLastname()} name="lastname">
                             </p>
                         </div>
                     </div>
@@ -39,8 +39,16 @@
                     </div>
                     <div class="field-body">
                         <div class="field">
-                            <p class="control">
-                                <input class="input" value=${member.email} name="email" readonly>
+                           <!-- code bellow from https://bulma.io/documentation/form/input/-->
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" value=${member.getEmail()} name="email" readonly>
+                                <span class="icon is-small is-left">
+                                  <i class="fas fa-envelope"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                  <i class="fas fa-check"></i>
+                                </span>
+
                             </p>
                         </div>
                     </div>
@@ -52,8 +60,11 @@
                     </div>
                     <div class="field-body">
                         <div class="field">
-                            <p class="control">
-                                <input class="input" value=${member.password} type="password" name="password">
+                            <p class="control has-icons-left">
+                                <input class="input" value=${member.getPassword()} type="password" name="password">
+                                <span class="icon is-small is-left">
+                                  <i class="fas fa-lock"></i>
+                                </span>
                             </p>
                         </div>
                     </div>

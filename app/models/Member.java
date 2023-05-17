@@ -25,6 +25,22 @@ public class Member extends Model {
     this.password = password;
   }
 
+  public String getFirstname() {
+    return firstname;
+  }
+
+  public String getLastname() {
+    return lastname;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
   public static Member findByEmail(String email) {
     return find("email", email).first();
   }
