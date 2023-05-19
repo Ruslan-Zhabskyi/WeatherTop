@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8b7c012d-60ef-4dbc-b666-92d60588a2e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/WeatherTop.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTop.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/addreading.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/addreading.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/addstation.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/addstation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/stationcards.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/stationcards.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/updateuserdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/updateuserdetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +99,7 @@
       <workItem from="1683233694244" duration="2881000" />
       <workItem from="1683367991094" duration="359000" />
       <workItem from="1683460210279" duration="49044000" />
-      <workItem from="1684236610095" duration="12864000" />
+      <workItem from="1684236610095" duration="14166000" />
     </task>
     <servers />
   </component>

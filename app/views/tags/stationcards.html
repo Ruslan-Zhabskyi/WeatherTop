@@ -2,10 +2,8 @@
 
 <div class="columns">
     <div class="column is-one-fifth">
-
         <div class="card has-background-light message">
             <div class="card-content">
-
                 <div class="content has-text-centered">
                     <h2>${station.getName()}
                         <i class="fas fa-location-dot"></i>
@@ -13,17 +11,13 @@
                     ${station.getLat()} <br>
                     ${station.getLng()} <br>
                 </div>
-
             </div>
         </div>
-
     </div>
 
     <div class="column is-one-fifth">
-
         <div class="card has-background-light message">
             <div class="card-content">
-
                 <div class="content has-text-centered">
                     <h2>Weather
                         #{if station.recentCodeConverted() == 'Rain'}
@@ -55,19 +49,14 @@
                         #{/else}
                     </h2>
                     ${station.recentCodeConverted()}
-
                 </div>
-
             </div>
         </div>
-
     </div>
 
     <div class="column is-one-fifth">
-
         <div class="card has-background-light message">
             <div class="card-content">
-
                 <div class="content has-text-centered">
                     <h2>Temp
                         #{if station.recentTemperatureC() >= 20}
@@ -102,17 +91,13 @@
                     Max: ${station.highestTemperatureC()} <br>
                     Min: ${station.lowestTemperatureC()} <br>
                 </div>
-
             </div>
         </div>
-
     </div>
 
     <div class="column is-one-fifth">
-
         <div class="card has-background-light message">
             <div class="card-content">
-
                 <div class="content has-text-centered">
                     <h2>Wind
                         <i class="fas fa-wind"></i>
@@ -135,17 +120,13 @@
                     Max: ${station.highestWindSpeed()} <br>
                     Min: ${station.lowestWindSpeed()} <br>
                 </div>
-
             </div>
         </div>
-
     </div>
 
     <div class="column is-one-fifth">
-
         <div class="card has-background-light message">
             <div class="card-content">
-
                 <div class="content has-text-centered">
                     <h2>Pressure
                         <i class="fas fa-gauge"></i>
@@ -166,12 +147,9 @@
                     Min: ${station.lowestPressure()}
 
                 </div>
-
             </div>
         </div>
-
     </div>
-
 </div>
 
 #{/list}
